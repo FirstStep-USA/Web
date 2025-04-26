@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstStep USA | Your Journey to the U.S. Starts with Confidence</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'us-blue': '#002366',
+                        'us-red': '#BF0A30',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,35,102,0.9) 0%, rgba(191,10,48,0.8) 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #BF0A30;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .active-nav:after {
+            width: 100%;
+        }
+        .profile-img {
+            border: 5px solid white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .deal-tag {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #BF0A30;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .budget-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(191, 10, 48, 0.5);
+        }
+        .budget-result {
+            transition: all 0.3s ease;
+        }
+        .forum-post:hover {
+            background-color: rgba(0, 35, 102, 0.05);
+        }
+        .country-selector {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .university-selector {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .guide-section {
+            transition: all 0.3s ease;
+        }
+        .guide-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .flag-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-flag-usa text-us-blue text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-us-blue">FirstStep<span class="text-us-red">USA</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                    <a href="#home" class="nav-link active-nav text-us-blue px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-us-blue px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-us-blue px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#deals" class="nav-link text-gray-700 hover:text-us-blue px-3 py-2 text-sm font-medium">Deals</a>
+                    <a href="#forum" class="nav-link text-gray-700 hover:text-us-blue px-3 py-2 text-sm font-medium">Community</a>
+                    <a href="#guide" class="nav-link text-gray-700 hover:text-us-blue px-3 py-2 text-sm font-medium">Personal Guide</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-us-blue px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#contact" class="ml-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-us-red hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Get Started
+                    </a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-us-blue hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#home" class="block pl-3 pr-4 py-2 border-l-4 border-us-red text-us-blue bg-red-50 text-base font-medium">Home</a>
+                <a href="#about" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-700 hover:text-us-blue hover:bg-gray-50 hover:border-gray-300 text-base font-medium">About</a>
+                <a href="#services" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-700 hover:text-us-blue hover:bg-gray-50 hover:border-gray-300 text-base font-medium">Services</a>
+                <a href="#deals" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-700 hover:text-us-blue hover:bg-gray-50 hover:border-gray-300 text-base font-medium">Deals</a>
+                <a href="#forum" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-700 hover:text-us-blue hover:bg-gray-50 hover:border-gray-300 text-base font-medium">Community</a>
+                <a href="#guide" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-700 hover:text-us-blue hover:bg-gray-50 hover:border-gray-300 text-base font-medium">Personal Guide</a>
+                <a href="#contact" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-700 hover:text-us-blue hover:bg-gray-50 hover:border-gray-300 text-base font-medium">Contact</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-200">
+                <div class="mt-3 space-y-1">
+                    <a href="#contact" class="block w-full px-4 py-2 text-center text-base font-medium text-white bg-us-red hover:bg-red-700 rounded-md shadow">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Journey to the U.S. Starts with Confidence</h1>
+                    <p class="text-xl mb-8">We guide international students through every step of their American adventure - from housing to internships, budgeting to cultural orientation.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-us-red hover:bg-red-700 rounded-md text-white font-medium text-center transition duration-300">Get Personalized Help</a>
+                        <a href="#services" class="px-6 py-3 bg-white hover:bg-gray-100 rounded-md text-us-blue font-medium text-center transition duration-300">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student with graduation cap" class="w-full max-w-md rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalized Guide Section -->
+    <section id="guide" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Your Personalized First Step Guide</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tailored for Your Country, Your University, Your Journey</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-8 mb-12">
+                <div class="max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-semibold text-center text-us-blue mb-6">Tell Us About Your Journey</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="country" class="block text-sm font-medium text-gray-700 mb-1">Where are you coming from?</label>
+                            <select id="country" class="country-selector mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-us-blue focus:border-us-blue rounded-md">
+                                <option value="">Select your country</option>
+                                <option value="india">India</option>
+                                <option value="china">China</option>
+                                <option value="brazil">Brazil</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="south-korea">South Korea</option>
+                                <option value="vietnam">Vietnam</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="canada">Canada</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="university" class="block text-sm font-medium text-gray-700 mb-1">Which U.S. university are you moving to?</label>
+                            <select id="university" class="university-selector mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-us-blue focus:border-us-blue rounded-md">
+                                <option value="">Select your university</option>
+                                <option value="syracuse">Syracuse University</option>
+                                <option value="nyu">New York University (NYU)</option>
+                                <option value="usc">University of Southern California (USC)</option>
+                                <option value="ucla">University of California, Los Angeles (UCLA)</option>
+                                <option value="umich">University of Michigan</option>
+                                <option value="uiuc">University of Illinois at Urbana-Champaign</option>
+                                <option value="purdue">Purdue University</option>
+                                <option value="asu">Arizona State University</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <button id="generateGuide" class="px-6 py-3 bg-us-red hover:bg-red-700 rounded-md text-white font-medium transition duration-300">
+                            Generate My Personalized Guide
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guide Content (Hidden by Default) -->
+            <div id="guideContent" class="hidden">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-semibold text-us-blue">Your Customized Guide for <span id="countryName"></span> → <span id="universityName"></span></h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Before You Leave Section -->
+                    <div class="guide-section bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-us-blue text-white">
+                                <i class="fas fa-plane-departure"></i>
+                            </div>
+                            <h4 class="ml-3 text-lg font-medium text-gray-900">Before You Leave <span id="countryNameShort"></span></h4>
+                        </div>
+                        <div id="beforeYouLeaveContent" class="space-y-3 text-gray-600">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Neighborhoods Section -->
+                    <div class="guide-section bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-us-red text-white">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h4 class="ml-3 text-lg font-medium text-gray-900">Neighborhoods Near <span id="universityNameShort"></span></h4>
+                        </div>
+                        <div id="neighborhoodsContent" class="space-y-3 text-gray-600">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Grocery Stores Section -->
+                    <div class="guide-section bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-us-blue text-white">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h4 class="ml-3 text-lg font-medium text-gray-900">Grocery Stores</h4>
+                        </div>
+                        <div id="groceryStoresContent" class="space-y-3 text-gray-600">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Plans Section -->
+                    <div class="guide-section bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-us-red text-white">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4 class="ml-3 text-lg font-medium text-gray-900">Mobile Plans</h4>
+                        </div>
+                        <div id="mobilePlansContent" class="space-y-3 text-gray-600">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Community Groups Section -->
+                    <div class="guide-section bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-us-blue text-white">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="ml-3 text-lg font-medium text-gray-900">Community Groups</h4>
+                        </div>
+                        <div id="communityGroupsContent" class="space-y-3 text-gray-600">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Cultural Tips Section -->
+                    <div class="guide-section bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-us-red text-white">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <h4 class="ml-3 text-lg font-medium text-gray-900">Cultural Tips</h4>
+                        </div>
+                        <div id="culturalTipsContent" class="space-y-3 text-gray-600">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <button id="resetGuide" class="px-6 py-2 border border-us-blue text-us-blue rounded-md hover:bg-us-blue hover:text-white transition duration-300">
+                        Start Over with Different Options
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">About FirstStep USA</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're dedicated to making your transition to life in the United States as smooth and successful as possible.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Academic illustration" class="w-full max-w-md mx-auto rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-us-blue mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">Moving to a new country for education is exciting but can also be overwhelming. At FirstStep USA, we provide comprehensive support to international students in all aspects of their American experience.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-50 text-us-red">
+                                    <i class="fas fa-home text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Housing Assistance</h4>
+                                <p class="text-gray-600">We help you find safe, affordable housing near your campus with trusted landlords.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-50 text-us-red">
+                                    <i class="fas fa-dollar-sign text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Financial Guidance</h4>
+                                <p class="text-gray-600">Learn to budget effectively and discover student discounts to make your money go further.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-50 text-us-red">
+                                    <i class="fas fa-briefcase text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Career Support</h4>
+                                <p class="text-gray-600">Gain access to internship opportunities and job placement assistance tailored to your field.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals & Discounts Section -->
+    <section id="deals" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Student Deals & Discounts</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Exclusive offers and discounts to help you save money as a student in the U.S.</p>
+            </div>
+
+            <!-- Seasonal Offers -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-us-blue mb-6 text-center">Current Seasonal Offers</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Deal 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative hover-scale">
+                        <div class="deal-tag">50%</div>
+                        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwZGVhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Laptop deal" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-us-blue mb-2">Back-to-School Tech Sale</h4>
+                            <p class="text-gray-600 mb-4">50% off select laptops and tablets for students with valid .edu email</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Expires: Sep 30, 2023</span>
+                                <a href="#" class="text-us-red font-medium hover:underline">Get Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Deal 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative hover-scale">
+                        <div class="deal-tag">30%</div>
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3BvdGlmeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Spotify deal" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-us-blue mb-2">Spotify Student Plan</h4>
+                            <p class="text-gray-600 mb-4">Premium Spotify + Hulu + Showtime for just $4.99/month (normally $9.99)</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Ongoing</span>
+                                <a href="#" class="text-us-red font-medium hover:underline">Get Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Deal 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative hover-scale">
+                        <div class="deal-tag">$100</div>
+                        <img src="Flight.png" alt="Travel deal" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-us-blue mb-2">Student Flight Discount</h4>
+                            <p class="text-gray-600 mb-4">$100 off international flights for students with Student Universe</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Expires: Dec 31, 2023</span>
+                                <a href="#" class="text-us-red font-medium hover:underline">Get Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deals Blog -->
+            <div>
+                <h3 class="text-2xl font-semibold text-us-blue mb-6 text-center">Ongoing Student Discounts</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <!-- Category 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4 mx-auto">
+                            <i class="fas fa-laptop text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-center text-us-blue mb-3">Electronics</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Apple Education Pricing</li>
+                            <li>• Dell University Discount</li>
+                            <li>• Microsoft Student Store</li>
+                            <li>• Adobe Creative Cloud 60% off</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Category 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4 mx-auto">
+                            <i class="fas fa-utensils text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-center text-us-blue mb-3">Groceries</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Amazon Prime Student 50% off</li>
+                            <li>• Whole Foods student discount</li>
+                            <li>• Kroger student deals</li>
+                            <li>• Instacart student membership</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Category 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4 mx-auto">
+                            <i class="fas fa-plane text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-center text-us-blue mb-3">Travel</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• STA Travel student rates</li>
+                            <li>• Greyhound student discount</li>
+                            <li>• Amtrak student fares</li>
+                            <li>• Hostelworld student deals</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Category 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4 mx-auto">
+                            <i class="fas fa-newspaper text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-center text-us-blue mb-3">Subscriptions</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• New York Times student rate</li>
+                            <li>• Wall Street Journal discount</li>
+                            <li>• The Economist student offer</li>
+                            <li>• Washington Post student deal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="mt-16 bg-gradient-to-r from-us-blue to-us-red rounded-xl p-8 text-white">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold mb-4">Get Monthly Tips, Deals, and Resources</h3>
+                    <p class="mb-6">Sign up for our newsletter and receive the best student discounts and living tips directly to your inbox!</p>
+                    <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-md w-full sm:w-96 text-gray-900 focus:outline-none">
+                        <button type="submit" class="px-6 py-3 bg-white text-us-blue font-medium rounded-md hover:bg-gray-100 transition duration-300">Subscribe</button>
+                    </form>
+                    <p class="text-sm mt-4 text-gray-200">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Forum / Community Section -->
+    <section id="forum" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Student Community</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Connect with fellow international students, share tips, and find support</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Forum Categories -->
+                <div class="md:col-span-2">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h3 class="text-2xl font-semibold text-us-blue mb-6">Discussion Topics</h3>
+                        
+                        <!-- Forum Post 1 -->
+                        <div class="forum-post bg-gray-50 p-4 rounded-lg mb-4 cursor-pointer transition duration-300">
+                            <div class="flex items-start">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User" class="w-10 h-10 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-medium text-us-blue">Finding Roommates in Boston</h4>
+                                    <p class="text-sm text-gray-500 mb-2">Posted by Maria G. • 2 days ago</p>
+                                    <p class="text-gray-600">Looking for female roommates near Northeastern University for Fall semester. Any recommendations for safe neighborhoods?</p>
+                                    <div class="flex mt-2">
+                                        <span class="text-sm text-gray-500 mr-4">12 replies</span>
+                                        <span class="text-sm text-gray-500">24 likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Forum Post 2 -->
+                        <div class="forum-post bg-gray-50 p-4 rounded-lg mb-4 cursor-pointer transition duration-300">
+                            <div class="flex items-start">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-10 h-10 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-medium text-us-blue">Best Bank for International Students?</h4>
+                                    <p class="text-sm text-gray-500 mb-2">Posted by Ahmed K. • 1 week ago</p>
+                                    <p class="text-gray-600">Just arrived in NYC. Which bank has the best services for international students with no credit history?</p>
+                                    <div class="flex mt-2">
+                                        <span class="text-sm text-gray-500 mr-4">27 replies</span>
+                                        <span class="text-sm text-gray-500">42 likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Forum Post 3 -->
+                        <div class="forum-post bg-gray-50 p-4 rounded-lg mb-4 cursor-pointer transition duration-300">
+                            <div class="flex items-start">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" class="w-10 h-10 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-medium text-us-blue">Part-time Job Opportunities</h4>
+                                    <p class="text-sm text-gray-500 mb-2">Posted by Wei L. • 3 days ago</p>
+                                    <p class="text-gray-600">Sharing a list of on-campus jobs at UCLA that accept international students. Add your findings too!</p>
+                                    <div class="flex mt-2">
+                                        <span class="text-sm text-gray-500 mr-4">8 replies</span>
+                                        <span class="text-sm text-gray-500">35 likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- View All Button -->
+                        <div class="text-center mt-6">
+                            <a href="#" class="inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-us-red hover:bg-red-700">
+                                View All Discussions
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links & Resources -->
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                        <h3 class="text-xl font-semibold text-us-blue mb-4">Join Our Community</h3>
+                        <p class="text-gray-600 mb-4">Connect with thousands of international students across the U.S.</p>
+                        <a href="#" class="w-full block text-center px-4 py-2 bg-us-blue text-white rounded-md hover:bg-blue-800 mb-4">
+                            <i class="fab fa-facebook mr-2"></i> Facebook Group
+                        </a>
+                        <a href="#" class="w-full block text-center px-4 py-2 bg-us-red text-white rounded-md hover:bg-red-700">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Chat
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-us-blue mb-4">Quick Resources</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="flex items-center text-gray-700 hover:text-us-blue">
+                                    <i class="fas fa-file-pdf text-us-red mr-3"></i>
+                                    <span>International Student Handbook (PDF)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-700 hover:text-us-blue">
+                                    <i class="fas fa-calendar-alt text-us-blue mr-3"></i>
+                                    <span>Important Visa Dates & Deadlines</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-700 hover:text-us-blue">
+                                    <i class="fas fa-map-marked-alt text-us-red mr-3"></i>
+                                    <span>Campus City Guides</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-700 hover:text-us-blue">
+                                    <i class="fas fa-question-circle text-us-blue mr-3"></i>
+                                    <span>FAQs for New Students</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Meet the Founder</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The visionary behind FirstStep USA and our commitment to student success</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+                <!-- Profile Image -->
+                <div class="w-full lg:w-1/3 flex justify-center">
+                    <div class="relative">
+                        <img src="MaulikR.JPG" 
+                             alt="Maulik Ramnani" 
+                             class="profile-img w-50 h-100 rounded-full object-cover">
+                        <div class="absolute -bottom-4 -right-5 bg-white p-2 rounded-full shadow-lg">
+                            <div class="bg-us-red text-white p-3 rounded-full">
+                                <i class="fas fa-lightbulb text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="w-full lg:w-1/2">
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 hover-scale">
+                        <h2 class="text-2xl font-bold text-us-blue mb-4">Hello, I'm Maulik Ramnani</h2>
+                        <p class="text-gray-600 mb-6">
+                            As an international student who has navigated the challenges of studying abroad firsthand, I founded FirstStep USA to create the support system I wish I had when I first arrived in the United States.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-us-blue mb-2">My Journey</h3>
+                            <p class="text-gray-600">
+                                Coming from India to pursue my Master's degree at Syracuse University, I experienced the struggles of finding housing, managing finances, and adapting to a new culture. These challenges inspired me to build a platform that helps students overcome these obstacles more easily.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-us-blue mb-2">Why This Project?</h3>
+                            <p class="text-gray-600">
+                                I believe every international student deserves a smooth transition to life in the U.S. FirstStep USA combines my technical expertise with my personal experience to provide practical solutions that address real student needs.
+                            </p>
+                        </div>
+
+                        <!-- Links Section -->
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <a href="https://www.linkedin.com/in/maulik-ramnani/" 
+                               target="_blank" 
+                               class="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">
+                                <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                            </a>
+                            
+                            <a href="Resume - Maulik.pdf" 
+                               target="_blank" 
+                               class="flex items-center bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg transition-colors">
+                                <i class="fas fa-file-pdf mr-2"></i> View Resume
+                            </a>
+                            
+                            <a href="mailto:maulik@firststep-usa.com" 
+                               class="flex items-center bg-us-red hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors">
+                                <i class="fas fa-envelope mr-2"></i> Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Experience -->
+            <div class="max-w-4xl mx-auto mt-16">
+                <h2 class="text-2xl font-bold text-center text-us-blue mb-8">My Background</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Education -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4 mx-auto">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Education</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-800">Syracuse University</h4>
+                                <p class="text-gray-700 text-sm">M.S. - Information Systems</p>
+                                <p class="text-gray-600 text-sm"></p>
+                                <p class="text-gray-700 text-sm">CAS - Information Security Management</p>
+                                <p class="text-gray-600 text-sm"></p>
+                                <p class="text-gray-500 text-xs">2022 - 2024</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">SGSITS, Indore</h4>
+                                <p class="text-gray-600 text-sm">Bachelor of Technology</p>
+                                <p class="text-gray-600 text-sm">Computer Science & Engineering</p>
+                                <p class="text-gray-500 text-xs">2018 - 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4 mx-auto">
+                            <i class="fas fa-briefcase text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Experience</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-800">FirstStep USA</h4>
+                                <p class="text-gray-600 text-sm">Founder & CEO</p>
+                                <p class="text-gray-500 text-xs">2025 - Present</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Syracuse University</h4>
+                                <p class="text-gray-600 text-sm">Graduate Research Assistant</p>
+                                <p class="text-gray-500 text-xs">2024 - 2025</p>
+                            </div>
+                             <div>
+                                <h4 class="font-medium text-gray-800">SIDEARM Sports</h4>
+                                <p class="text-gray-600 text-sm">Data Quality Intern</p>
+                                <p class="text-gray-500 text-xs">2023 - 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive support designed specifically for international students in the U.S.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4">
+                        <i class="fas fa-home text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Accommodation Support</h3>
+                    <p class="text-gray-600">We help you find safe, affordable housing options near your campus, with vetted landlords and roommate matching services.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4">
+                        <i class="fas fa-wallet text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Financial Budgeting & Deals</h3>
+                    <p class="text-gray-600">Learn to manage your finances effectively with personalized budgeting plans and access to exclusive student discounts.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4">
+                        <i class="fas fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Internship & Job Assistance</h3>
+                    <p class="text-gray-600">Gain professional experience with our network of internship opportunities and career placement services.</p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4">
+                        <i class="fas fa-balance-scale text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Legal Orientation</h3>
+                    <p class="text-gray-600">Understand your visa requirements, work permissions, and other legal aspects of studying in the U.S.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-us-red hover:bg-red-700">
+                    Customize Your Support Package
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Our Unique Tools</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Special features designed to make your transition easier</p>
+            </div>
+
+            <!-- Feature 1: Checklist Generator -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold text-us-blue mb-6">Personalized Checklist Generator</h3>
+                    <p class="text-gray-600 mb-6">Answer a few quick questions and get a customized checklist of everything you need to do before and after arriving in the U.S.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <form id="checklistForm" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Where are you moving to?</label>
+                                <select class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue">
+                                    <option value="">Select your city</option>
+                                    <option value="nyc">New York City</option>
+                                    <option value="boston">Boston</option>
+                                    <option value="la">Los Angeles</option>
+                                    <option value="chicago">Chicago</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Are you staying on-campus or off-campus?</label>
+                                <select class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue">
+                                    <option value="">Select housing type</option>
+                                    <option value="on-campus">On-campus housing</option>
+                                    <option value="off-campus">Off-campus housing</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Are you looking for a part-time job?</label>
+                                <select class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue">
+                                    <option value="">Select option</option>
+                                    <option value="yes">Yes, immediately</option>
+                                    <option value="later">Yes, but later</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-us-red text-white py-2 px-4 rounded-md hover:bg-red-700">
+                                Generate My Checklist
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative">
+                        <img src="Logo 2.png" 
+                             alt="Logo" 
+                             class="h-30">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Interactive Budgeting Tool -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1ZGdldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Budgeting" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-us-blue mb-6">Interactive Budgeting Tool</h3>
+                    <p class="text-gray-600 mb-6">Plan your monthly expenses with our easy-to-use budgeting calculator that gives personalized savings tips.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Monthly Rent ($)</label>
+                                <input type="number" class="budget-input w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue" placeholder="1000">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Groceries ($)</label>
+                                <input type="number" class="budget-input w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue" placeholder="300">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Transportation ($)</label>
+                                <input type="number" class="budget-input w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue" placeholder="150">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Miscellaneous ($)</label>
+                                <input type="number" class="budget-input w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-us-blue focus:border-us-blue" placeholder="200">
+                            </div>
+                            
+                            <button id="calculateBudget" class="w-full bg-us-blue text-white py-2 px-4 rounded-md hover:bg-blue-800">
+                                Calculate My Budget
+                            </button>
+                            
+                            <div id="budgetResult" class="budget-result hidden mt-4 p-4 bg-white rounded-md border border-gray-200">
+                                <h4 class="font-medium text-us-blue mb-2">Your Estimated Monthly Expenses: <span id="totalExpenses" class="text-us-red">$0</span></h4>
+                                <p id="budgetTip" class="text-sm text-gray-600"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: University City Guides -->
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold text-us-blue mb-6">University City Guides</h3>
+                <p class="text-gray-600 mb-8 max-w-3xl mx-auto">Detailed resource pages for major university cities with information on housing, transportation, grocery stores, and more.</p>
+                
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4 mx-auto">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <h4 class="font-medium text-us-blue">New York City</h4>
+                        <p class="text-sm text-gray-600">NYU, Columbia, CUNY</p>
+                    </a>
+                    
+                    <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4 mx-auto">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <h4 class="font-medium text-us-blue">Boston</h4>
+                        <p class="text-sm text-gray-600">Harvard, MIT, BU, Northeastern</p>
+                    </a>
+                    
+                    <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white mb-4 mx-auto">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <h4 class="font-medium text-us-blue">Los Angeles</h4>
+                        <p class="text-sm text-gray-600">UCLA, USC, Caltech</p>
+                    </a>
+                    
+                    <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white mb-4 mx-auto">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <h4 class="font-medium text-us-blue">Chicago</h4>
+                        <p class="text-sm text-gray-600">UChicago, Northwestern, UIC</p>
+                    </a>
+                </div>
+                
+                <div class="mt-10">
+                    <a href="#" class="inline-flex items-center text-us-blue font-medium hover:underline">
+                        View All City Guides
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-us-blue mb-4">Student Success Stories</h2>
+                <div class="w-20 h-1 bg-us-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Hear from students who've successfully transitioned to life in the U.S. with our help.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria's testimonial">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Maria G.</h4>
+                            <p class="text-gray-600">University of Texas at Austin</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"FirstStep USA found me the perfect apartment near campus and helped me understand my lease agreement. They also connected me with other Brazilian students which made my transition so much easier!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/44.jpg" alt="Ahmed's testimonial">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Ahmed K.</h4>
+                            <p class="text-gray-600">New York University</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"The financial budgeting workshop saved me hundreds of dollars each month. I learned about student discounts I never knew existed! Now I can enjoy New York without constantly worrying about money."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Wei's testimonial">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Wei L.</h4>
+                            <p class="text-gray-600">University of California, Berkeley</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Thanks to FirstStep's internship program, I secured a summer internship at a tech startup in Silicon Valley. They helped with my resume, interview prep, and even explained the CPT process clearly."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-us-blue mb-4">Get in Touch</h2>
+                    <div class="w-20 h-1 bg-us-red mb-6"></div>
+                    <p class="text-xl text-gray-600 mb-8">Ready to start your American journey with confidence? Reach out to us for personalized assistance.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Office</h3>
+                                <p class="text-gray-600">1209 Mountain Road PL NE, Suite N<br>Albuquerque, NM 87110</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-red text-white">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Call Us</h3>
+                                <p class="text-gray-600">+1 (607) 288-3262<br>Mon-Fri, 9am-5pm EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-us-blue text-white">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email Us</h3>
+                                <p class="text-gray-600">info@FirstStep-USA.com<br>We typically reply within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="h-10 w-10 rounded-full bg-us-blue text-white flex items-center justify-center hover:bg-blue-800">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-us-red text-white flex items-center justify-center hover:bg-red-700">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-us-blue text-white flex items-center justify-center hover:bg-blue-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-us-red text-white flex items-center justify-center hover:bg-red-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-us-blue mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-us-blue focus:border-us-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-us-blue focus:border-us-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (optional)</label>
+                            <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-us-blue focus:border-us-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="university" class="block text-sm font-medium text-gray-700">University
+</html>
